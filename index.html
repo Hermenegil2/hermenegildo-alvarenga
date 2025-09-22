@@ -1,223 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hermenegildo Alvarenga - Portafolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Ubuntu 24</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: #2E1B38; /* Ubuntu's Aubergine */
+            color: #F0EAE4; /* Ubuntu's Light */
+        }
+
+        /* --- Estilo de tarjetas y contenedores --- */
+        .ubuntu-card {
+            background-color: rgba(30, 15, 40, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(240, 234, 228, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+        }
+
+        /* --- Estilo de botones --- */
+        .ubuntu-button {
+            transition: all 0.3s ease-in-out;
+            border-radius: 8px;
+            background-color: #D94921; /* Ubuntu's Orange */
+            color: #F0EAE4;
+            font-weight: 500;
+        }
+
+        .ubuntu-button:hover {
+            transform: translateY(-2px);
+            background-color: #A33A18; /* Darker orange on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* --- Efecto de acento para texto --- */
+        .ubuntu-text-acento {
+            color: #D94921;
+        }
+
+    </style>
 </head>
-  <style>
-        * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+<body class="min-h-screen">
+    
+    <div class="min-h-screen flex flex-col items-center p-4 bg-[#000000] sm:bg-[#2E1B38] transition-colors duration-500">
+        <!-- Header Section -->
+        <header class="w-full max-w-5xl flex flex-col sm:flex-row justify-between items-center ubuntu-card p-6 mb-10">
+            <h1 class="text-4xl sm:text-5xl font-bold text-[#F0EAE4] mb-4 sm:mb-0">
+                Hermenegildo Alvarenga
+            </h1>
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-4">
+                    <li><a href="#about" class="ubuntu-button px-6 py-2">Sobre Mí</a></li>
+                    <li><a href="#experience" class="ubuntu-button px-6 py-2">Experiencia</a></li>
+                    <li><a href="#skills" class="ubuntu-button px-6 py-2">Habilidades</a></li>
+                    <li><a href="#contact" class="ubuntu-button px-6 py-2">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    body {
-        font-family: 'Inter', sans-serif;
-        background: linear-gradient(to right, #f8fafc, #e0f2fe);
-        color: #1f2937;
-        line-height: 1.6;
-        scroll-behavior: smooth;
-    }
+        <!-- Main Content -->
+        <main class="w-full max-w-5xl space-y-10">
+            <!-- About Me Section -->
+            <section id="about" class="p-8 ubuntu-card">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+                    Sobre Mí
+                </h2>
+                <p class="text-lg sm:text-xl leading-relaxed">
+                    Desarrollador Fullstack con experiencia práctica en tecnologías modernas como **NestJS**, **Kotlin Compose**, **Angular** y **PostgreSQL**. He liderado el desarrollo de sistemas de facturación y aplicaciones móviles de delivery con seguimiento en tiempo real. Busco formar parte de un equipo donde pueda aplicar mis habilidades para crear soluciones escalables y eficientes.
+                </p>
+            </section>
 
-    header {
-        background: linear-gradient(90deg, #0f172a, #1e3a8a);
-        color: #fff;
-        padding: 3rem 2rem;
-        text-align: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+            <!-- Experience & Projects Section -->
+            <section id="experience" class="p-8 ubuntu-card">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8">Experiencia Profesional</h2>
+                <div class="space-y-8">
+                    <!-- Project 1: App de Delivery -->
+                    <div class="p-6 ubuntu-card">
+                        <h3 class="text-2xl font-bold ubuntu-text-acento mb-2">Desarrollador Fullstack - App de Delivery</h3>
+                        <p class="text-sm text-gray-400 mb-4">Febrero 2025 - Actualidad</p>
+                        <p class="text-base mb-4 leading-normal">
+                            - Desarrollo backend con **NestJS** para gestión de usuarios, pedidos y estados.
+                            - App móvil nativa en **Kotlin Compose** con seguimiento en tiempo real.
+                            - Implementación de autenticación JWT y geolocalización.
+                            - Integración de funcionalidades como notificaciones push y control de stock.
+                        </p>
+                        <p class="text-sm font-bold">Tecnologías: NestJS, PostgreSQL, Kotlin Compose</p>
+                    </div>
 
-    nav {
-        margin-top: 1.5rem;
-    }
+                    <!-- Project 2: Proyecto de Facturación -->
+                    <div class="p-6 ubuntu-card">
+                        <h3 class="text-2xl font-bold ubuntu-text-acento mb-2">Desarrollador Fullstack - Proyecto de Facturación</h3>
+                        <p class="text-sm text-gray-400 mb-4">Período: 2023 - 2024</p>
+                        <p class="text-base mb-4 leading-normal">
+                            - Diseñé e implementé arquitectura backend RESTful con **Java Spring Boot**.
+                            - Integré la base de datos con **PostgreSQL** optimizando consultas SQL.
+                            - Desarrollé interfaz de usuario responsiva con **Angular 8** y **Bootstrap**.
+                            - Automatización de procesos de facturación e impresión de comprobantes.
+                        </p>
+                        <p class="text-sm font-bold">Tecnologías: Java Spring Boot, Angular 8, PostgreSQL</p>
+                    </div>
+                </div>
+            </section>
 
-    nav a {
-        color: #cbd5e1;
-        margin: 0 1rem;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s ease;
-    }
+            <!-- Skills Section -->
+            <section id="skills" class="p-8 ubuntu-card">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8">Habilidades</h2>
+                <h3 class="text-xl font-bold ubuntu-text-acento mb-4">Habilidades Técnicas</h3>
+                <ul class="flex flex-wrap gap-6 mb-8">
+                    <li class="bg-[#3D264A] px-6 py-3 rounded-lg">Backend: NestJS, Node.js, Java (Spring Boot)</li>
+                    <li class="bg-[#3D264A] px-6 py-3 rounded-lg">Frontend: Angular 8, HTML5, CSS3, Bootstrap</li>
+                    <li class="bg-[#3D264A] px-6 py-3 rounded-lg">Mobile: Kotlin Compose</li>
+                    <li class="bg-[#3D264A] px-6 py-3 rounded-lg">Base de Datos: PostgreSQL</li>
+                    <li class="bg-[#3D264A] px-6 py-3 rounded-lg">Lenguajes: TypeScript, Java, Kotlin</li>
+                </ul>
+                <h3 class="text-xl font-bold ubuntu-text-acento mb-4">Otros Datos</h3>
+                <ul class="flex flex-wrap gap-6">
+                    <li class="bg-[#3D264A] px-6 py-3 rounded-lg">Disponibilidad inmediata</li>
+                    <li class="bg-[#3D264A] px-6 py-3 rounded-lg">Comunicación y trabajo en equipo</li>
+                    <li class="bg-[#3D264A] px-6 py-3 rounded-lg">En constante capacitación profesional</li>
+                </ul>
+            </section>
 
-    nav a:hover {
-        color: #fff;
-    }
+            <!-- Contact Section -->
+            <section id="contact" class="p-8 ubuntu-card">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8">Contacto</h2>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-center">
+                    <p class="text-lg sm:text-xl">Envíame un mensaje:</p>
+                    <div class="flex gap-6">
+                        <a href="https://github.com/hermenegil2" target="_blank" class="ubuntu-button p-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.804 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.809 1.305 3.493.998.108-.771.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.465-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.771.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.802 24 17.301 24 12c0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hermenegildo-alvarenga" target="_blank" class="ubuntu-button p-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.233 0H1.767C.791 0 0 .791 0 1.767v20.466C0 23.209.791 24 1.767 24h20.466C23.209 24 24 23.209 24 22.233V1.767C24 .791 23.209 0 22.233 0zM7.228 20.498H3.593V9.782h3.635v10.716zM5.411 8.355c-1.2 0-2.174-1.127-2.174-2.52s.974-2.52 2.174-2.52 2.174 1.127 2.174 2.52c0 1.393-.974 2.52-2.174 2.52zM20.498 20.498h-3.634v-5.274c0-1.258-.45-2.115-1.565-2.115-1.17 0-1.859.791-2.164 1.554-.112.277-.14.662-.14.887v4.948h-3.635s.048-9.825 0-10.716h3.635v1.734c.484-.827 1.488-2.008 3.268-2.008 2.383 0 4.167 1.536 4.167 4.845v6.145z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:hermenegildo851276@gmail.com" class="ubuntu-button p-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 12.713l9.04-6.326c-.453-.306-1.503-.96-2.571-1.326-1.07-.367-2.222-.55-3.411-.55h-4.918c-1.189 0-2.342.183-3.412.55-1.068.366-2.118 1.02-2.571 1.326L12 12.713zm0 2.287L.954 7.218c.677-1.127 1.944-2.193 3.39-2.732 1.445-.539 3.12-.809 4.904-.809h5.504c1.784 0 3.459.27 4.904.809 1.446.539 2.713 1.605 3.39 2.732L12 15z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-8 text-lg sm:text-xl text-center">
+                    <p>Teléfono: +549 1168322939</p>
+                    <p>Email: hermenegildo851276@gmail.com</p>
+                    <p>Dirección: Salta 1363, Constitución, Buenos Aires, Argentina</p>
+                </div>
+            </section>
+        </main>
 
-    .container {
-        max-width: 1000px;
-        margin: 3rem auto;
-        padding: 0 1.5rem;
-    }
-
-    section {
-        margin-bottom: 3rem;
-        scroll-margin-top: 100px;
-    }
-
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 1.2rem;
-        color: #1e3a8a;
-        border-left: 5px solid #3b82f6;
-        padding-left: 0.6rem;
-    }
-
-    ul {
-        list-style: none;
-        padding-left: 1rem;
-    }
-
-    ul li::before {
-        content: '🎯';
-        margin-right: 0.5rem;
-    }
-
-    .card {
-        background: #ffffff;
-        border-left: 5px solid #1e40af;
-        border-radius: 12px;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-        padding: 2rem;
-        margin-bottom: 1.5rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    footer {
-        text-align: center;
-        padding: 2rem;
-        background: #0f172a;
-        color: #fff;
-        font-size: 0.95rem;
-    }
-
-    .contacto a {
-        color: white;
-        text-decoration: none;
-    }
-
-    .email {
-        color: #1e40af !important;
-        text-decoration: none;
-    }
-
-    .button {
-        display: inline-block;
-        margin-top: 1rem;
-        padding: 0.6rem 1.2rem;
-        background: #1e40af;
-        color: white;
-        border-radius: 8px;
-        text-decoration: none;
-        transition: background 0.3s ease;
-    }
-
-    .button:hover {
-        color: white;
-        background: #2563eb;
-    }
-
-    .icon {
-        margin-right: 0.5rem;
-        color: #1e3a8a;
-    }
-
-    .foto-perfil {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin-bottom: 1rem;
-    }
-
-    #perfil.card {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    #perfil .foto-perfil {
-        width: 150px;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    #perfil p {
-        flex: 1;
-        margin: 0;
-    }
-  </style>
-<body>
-  <header>
-    <h1>Hermenegildo Alvarenga</h1>
-    <p>👨‍💻 Analista de Sistemas | Programador Backend & Full Stack</p>
-    <nav>
-      <a href="#perfil">Perfil</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#educacion">Educación</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <div class="container">
-    <section id="perfil" class="card">
-  <div>
-    <h2><i class="fas fa-user icon"></i> Perfil Profesional</h2>
-    <p>
-      Apasionado por la tecnología y el desarrollo de software, con experiencia en proyectos web y móviles.
-      Especializado en NestJS, Kotlin Compose y PostgreSQL. Busco oportunidades donde pueda aportar y seguir creciendo
-      como desarrollador.
-    </p>
-  </div>
-  <img class="foto-perfil" src="assets/foto_perfil.jpeg" alt="Foto de perfil">
-</section>
-    <section id="habilidades" class="card">
-      <h2><i class="fas fa-cogs icon"></i>Habilidades Técnicas</h2>
-      <ul>
-        <li>NestJS, Node.js, Spring Boot</li>
-        <li>Angular 8, HTML5, CSS3, Bootstrap</li>
-        <li>Kotlin Compose (App móviles)</li>
-        <li>PostgreSQL, MySQL</li>
-        <li>Java, Kotlin, TypeScript</li>
-      </ul>
-    </section>
-
-    <section id="experiencia" class="card">
-      <h2><i class="fas fa-briefcase icon"></i>Experiencia</h2>
-      <ul>
-        <li>Desarrollo de sistema de facturación con Spring Boot y Angular 8 (2023)</li>
-        <li>App de delivery en desarrollo desde febrero 2025 con NestJS, PostgreSQL y Kotlin Compose</li>
-      </ul>
-    </section>
-
-    <section id="educacion" class="card">
-      <h2><i class="fas fa-graduation-cap icon"></i>Educación</h2>
-      <p>Analista de Sistemas - Universidad Nacional de Canindeyú (2015 - 2020)</p>
-    </section>
-
-    <section id="contacto" class="card contacto">
-      <h2><i class="fas fa-envelope icon"></i>Contacto</h2>
-      <p>Email: <a class="email" href="mailto:hermenegildo851276@gmail.com">hermenegildo851276@gmail.com</a></p>
-      <p>Teléfono: +595 985 661288</p>
-      <p>Ubicación: Constitución, Buenos Aires, 1363</p>
-      <a href="mailto:hermenegildo851276@gmail.com" class="button">Contáctame</a>
-    </section>
-  </div>
-
-  <footer>
-    &copy; 2025 Hermenegildo Alvarenga. Todos los derechos reservados.
-  </footer>
+        <!-- Footer -->
+        <footer class="w-full max-w-5xl mt-10 text-center text-sm">
+            <p>Hecho con ❤️.</p>
+        </footer>
+    </div>
 </body>
 </html>
